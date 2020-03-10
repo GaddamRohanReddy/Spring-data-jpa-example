@@ -19,8 +19,15 @@ public class Product {
 	@ApiModelProperty(notes = "Product Name should be atleast 3 characters")
 	@Size(min = 3,message = "Product Name should have atleast 3 characters")
 	private String productName;
+	private String productType;
 	private String productCost;
 	
+	public String getProductType() {
+		return productType;
+	}
+	public void setProductType(String productType) {
+		this.productType = productType;
+	}
 	public int getProductId() {
 		return productId;
 	}
@@ -41,8 +48,8 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", productName=" + productName + ", productCost=" + productCost
-				+ "]";
+		return "Product [productId=" + productId + ", productName=" + productName + ", productType=" + productType
+				+ ", productCost=" + productCost + "]";
 	}
 	
 }

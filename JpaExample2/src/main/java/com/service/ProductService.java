@@ -22,6 +22,7 @@ public class ProductService {
 		Product product = new Product();
 		product.setProductId(productRequest.getProductId());
 		product.setProductName(productRequest.getProductName());
+		product.setProductType(productRequest.getProductType());
 		product.setProductCost(productRequest.getProductCost());
 		productList.addProdToList(product);
 		productRepository.save(product);
